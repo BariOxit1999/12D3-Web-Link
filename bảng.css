@@ -1,0 +1,31 @@
+/* Thiết lập bảng */
+table {
+    width: 65%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+/* Định dạng tiêu đề bảng */
+th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Định dạng hàng dữ liệu */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Tô màu xen kẽ */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover vào hàng */
+tr:hover {
+    background-color: #ddd;
+}

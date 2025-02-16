@@ -1,0 +1,144 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 65px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 100px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li:hover a {
+	color: #007BFF;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+	margin-left: 25px
+}
+
+/* MAIN CONTENT */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+h1 {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+
+/* BÀI VIẾT */
+.content {
+    flex: 2;
+}
+
+.post {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: height 0.5s ease, background-color 0.3s ease;
+    overflow: hidden;
+    height: 60px; /* Giữ chiều cao tối thiểu */
+    transition: all 0.5s ease;
+}
+.hover-image {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 0; /* Ban đầu ẩn */
+    overflow: hidden;
+    opacity: 0; /* Ẩn hoàn toàn */
+    transform: scale(0.8); /* Nhỏ lại */
+    transition: opacity 0.5s ease, transform 0.5s ease, height 0.5s ease;
+}
+
+.hover-image img {
+    width: 130%;
+    display: block;
+}
+
+
+/* Khi hover vào article, ảnh hiện */
+.post:hover {
+    height: 200px; /* Khung mở rộng */
+    background-color: #f8f8f8;
+}
+
+.post:hover .hover-image{
+    height: 130px; /* Ảnh mở rộng */
+    opacity: 1; /* Hiện ảnh */
+    transform: scale(1); /* Phóng to */
+}
+
+/* Khi hover, đổi màu chữ */
+.post:hover h2 {
+    color: #007BFF;
+}
+
+
+/* FOOTER */
+.footer {
+    text-align: left;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    margin-top: 20px;
+	font-size: 13.5px;
+	line-height: 20px;
+}
+
+.site-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+			display: inline;
+        }
+
+
+#santa {
+    position: absolute;
+    font-size: 3em; /* Kích thước của sticker */
+    animation: moveSanta 15s linear infinite;
+    top: 90%; /* Vị trí dọc */
+}
+
+@keyframes moveSanta {
+    0% {
+        left: 0%; /* Bắt đầu từ cạnh trái */
+    }
+    50% {
+        left: 95%; /* Dừng lại gần cạnh phải */
+    }
+    100% {
+        left: 0%; /* Quay lại cạnh trái */
+    }
+}
+

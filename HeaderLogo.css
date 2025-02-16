@@ -1,0 +1,21 @@
+/* Thanh header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo */
+        .logo img {
+            height: 90px; /* Điều chỉnh kích thước logo */
+        }
+		
+		 /* Định dạng tiêu đề */
+        .site-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
